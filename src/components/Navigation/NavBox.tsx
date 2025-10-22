@@ -1,14 +1,23 @@
 import type { FC } from "react";
 import { NavLink } from "react-router";
+import './NavBox.module.css';
 
 interface NavBoxProps {
-    name: string
+  path: string;
+  width: string;
 }
 
-const NavBox:FC<NavBoxProps> = ({ name }) => {
-    return (
-        <NavLink to="/" className="text-white">{name}</NavLink>
-    )
-}
+const NavBox: FC<React.PropsWithChildren<NavBoxProps>> = ({ path, children, width }) => {
+  const boxDimension = width + " h-fit" 
 
-export default NavBox
+  return (
+    <div className={boxDimension}>
+      <NavLink to={path} className="text-white font-bold text-xl">
+        <p className="p-3">{children}</p>
+      </NavLink>
+    </div>
+  );
+};
+
+export default NavBox;
+
