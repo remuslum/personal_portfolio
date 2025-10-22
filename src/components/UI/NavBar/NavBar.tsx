@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import NavBox from "../../Navigation/NavBox";
-import './Navbar.module.css';
+import { colors } from "../../../util/colors";
 
 const NavBar: FC = () => {
   return (
@@ -11,14 +11,15 @@ const NavBar: FC = () => {
       <NavBox path="/" width="w-1/15">
         _home
       </NavBox>
-      <NavBox path="/" width="w-1/11">
+      <NavBox path="/experience" width="w-1/11">
         _experience
       </NavBox>
-      <NavBox path="/" width="w-1/10">
+      <NavBox path="/education" width="w-1/10">
         _education
       </NavBox>
 
-      <div className="flex-1"></div>
+      {/* Spacer */}
+      <div className={`flex-1 border border-[${colors.borders.borderColor}]`}></div>
 
       <NavBox path="/" width="w-1/10">
         _resume
