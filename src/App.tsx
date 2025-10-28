@@ -4,10 +4,11 @@ import NavBar from "./components/UI/NavBar/NavBar";
 import type { FC } from "react";
 import Education from "./components/UI/Education/Education";
 import Experience from "./components/UI/Experience/Experience";
+import './styles/fonts.css'
 
 const Layout:FC = () => {
   return (
-    <main className="bg-[#0F172B]">
+    <main className="flex flex-col min-h-screen bg-[#0F172B]">
       <NavBar />
       <Outlet />
     </main>
