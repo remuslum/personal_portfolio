@@ -5,7 +5,7 @@ import '../../../../styles/fonts.css'
 const Introduction:FC = () => {
     return (
       <div className="flex justify-center items-center w-1/2">
-        <div className="flex flex-col text-left font-primary">
+        <div className="flex flex-col text-left">
           <p className="text-lg text-[#9CA3AF] mb-2">Hi all, I am</p>
           <h1 className="text-6xl text-white mb-4">Remus Lum</h1>
           <p className="text-3xl text-[#4F61E8] mb-3">
